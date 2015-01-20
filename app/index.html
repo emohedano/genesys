@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GENESYS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for 'head'}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/genesys.css">
+
+    {{content-for 'head-footer'}}
+  </head>
+  <body>
+    {{content-for 'body'}}
+    <style type="text/css">
+
+      .md-btn{
+        padding: 5px;
+        width: 40px;
+        height: 40px;
+      }
+
+      .md-btn i{
+        font-size: 30px;
+      }
+
+      .md-btn.btn-sm{
+        width: 30px;
+        height: 30px;
+      }
+      .md-btn.btn-sm i{
+        font-size: 20px;
+      }
+
+      .md-btn.md-btn-rounded{
+        border-radius: 100% !important;
+      }
+
+      #mainTabsPane{
+        width: 450px;
+      }
+
+      #mainTabsPane .panel-body{
+        height: 600px;
+      }
+
+      #mainTabsPane .tab-content, #mainTabsPane .tab-pane{
+        height: 100%;
+      }
+
+      #mainTabsPane .panel-heading{
+        padding: 0;
+      }
+
+      #mainTabsPane .nav-tabs{
+        background-color: none;
+      }
+
+      #mainTabsPane .nav-tabs li{
+        width: 150px;
+        text-align: center;
+      }
+
+      #mainTabsPane .tab-pane .list-group-item{
+          padding: 1em;
+          cursor: pointer;
+      }
+
+      #mainTabsPane .tab-pane .list-group-item:hover{
+          background-color: #eee;
+      }
+      
+      #mainTabsPane .list-group{
+        margin-bottom: 0;
+      }      
+
+      #mainTabsPane .tab-pane{
+        position: relative;
+      }
+
+      #newFormat{
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+      }
+
+    </style>
+    
+    <div id="mainTabsPane" class="panel panel-info" role="tabpanel">
+      <div class="panel-heading">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Formatos</a></li>
+          <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Secuencias</a></li>
+          <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Temporizadores</a></li>
+        </ul>
+        <h3 class="panel-title"></h3>
+        <h3 class="panel-title"></h3>
+      </div>
+      <div class="panel-body">
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="home">
+            <div class="form-group">
+              <div class="form-control-wrapper">
+                <input type="text" class="form-control empty" placeholder="Buscar...">
+                <span class="material-input"></span>
+              </div>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span class="label label-default pull-right">3.1.1</span>
+                Informe Policiaco Homologado
+              </li>
+              <li class="list-group-item">
+                <span class="label label-default pull-right">3.1.1</span>
+                Informe Policiaco Homologado
+              </li>
+              <li class="list-group-item">
+                <span class="label label-default pull-right">3.1.1</span>
+                Informe Policiaco Homologado
+              </li>
+              <li class="list-group-item">
+                <span class="label label-default pull-right">3.1.1</span>
+                Informe Policiaco Homologado
+              </li>
+            </ul>
+            <button id="newFormat" class="btn btn-info btn-raised md-btn md-btn-rounded"><i class="mdi-content-add"></i></button>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="profile">dos</div>
+          <div role="tabpanel" class="tab-pane" id="messages">tres</div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/genesys.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.material.init();
+        });
+    </script>
+    {{content-for 'body-footer'}}
+  </body>
+</html>
