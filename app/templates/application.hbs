@@ -1,31 +1,18 @@
-<div id="mainTabsPane" class="panel panel-info" role="tabpanel">
-	<div class="panel-heading">
-		
-		<ul class="nav nav-tabs" role="tablist">
-			<li role="presentation" class="active">
-				<a href="/proceedings">Procedimientos</a>
-			</li>
-			<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Secuencias</a></li>
-			<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Temporizadores</a></li>
-		</ul>
 
+<div id="main-panel" class="panel panel-info col-lg-4 tabbed-panel list-panel">
+	<div class="panel-heading">
+		<ul class="nav nav-tabs">
+			<li>
+				{{#link-to 'proceedings'}} Procedimientos {{/link-to}}
+			</li>
+			<li>
+				 <a> Transiciones </a>
+			</li>
+		</ul>
 	</div>
 	<div class="panel-body">
-		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active" id="home">
-				<div class="form-group">
-					<div class="form-control-wrapper">
-						<input type="text" class="form-control empty" placeholder="Buscar...">
-						<span class="material-input"></span>
-					</div>
-				</div>
-				<ul class="list-group">
-					{{outlet}}
-				</ul>
-				<button id="newFormat" class="btn btn-info btn-raised md-btn md-btn-rounded"><i class="mdi-content-add"></i></button>
-			</div>
-			<div role="tabpanel" class="tab-pane" id="profile">dos</div>
-			<div role="tabpanel" class="tab-pane" id="messages">tres</div>
-		</div>
+		{{outlet main-panel-body}}
 	</div>
 </div>
+
+{{outlet secondary-panel}}

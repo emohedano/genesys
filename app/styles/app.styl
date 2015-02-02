@@ -1,0 +1,100 @@
+html, body
+	margin 20px
+
+.md-btn
+	padding 5px
+	width 40px
+	height 40px
+	
+	i
+		font-size 30px
+		
+	&.btn-sm
+		
+		width 30px
+		height 30px
+		
+		i
+			font-size 20px
+			
+	&.md-btn-rounded
+		border-radius 100% !important
+
+generic-panel()
+	
+	padding 0
+	
+	.panel-heading
+		height 40px
+		padding 0
+		
+	.new-btn
+		position absolute
+		bottom 10px
+		right 20px
+
+	
+	.panel-body
+		
+		position relative
+		height 600px
+		
+		
+		.list-group
+			height 500px
+
+
+.generic-panel
+	generic-panel()
+
+	
+.tabbed-panel
+	
+	generic-panel()
+		
+	.panel-heading
+		
+		li
+			width 50%
+			text-align center
+
+
+.list-panel
+	
+	generic-panel()
+		
+	.list-group
+		margin-bottom 0
+			
+	.list-group-item
+		
+		padding 1em
+		cursor pointer
+		
+		&.active
+			color #333
+			background-color #eee
+			
+			&:hover
+				outline none
+			
+		&:hover
+			background-color #eee
+
+	
+.detail-panel
+	
+	generic-panel()
+		
+	.panel-heading h3
+		margin 0
+		line-height 40px
+		padding-left 1em
+		color white
+		font-size 16px
+		
+
+.panel:not(:first-child)
+	margin-left 1em
+
+
