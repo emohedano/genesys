@@ -6,17 +6,15 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  	this.resource('proceedings',function () {
 
+      	this.route('new');
 
-	this.resource('proceedings',function () {
-
-		this.route('new');
-
-		this.resource('proceeding',{ path: '/:proceeding_id' });
+      	this.resource('proceeding',{ path: '/:proceeding_id' }, function () {
+      		this.route('edit');	
+      	});
 	
 	});
-
-	
 
 });
 

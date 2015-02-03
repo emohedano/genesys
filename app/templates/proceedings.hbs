@@ -7,7 +7,7 @@
 <ul class="list-group">
 	{{#each proceeding in controller}}
 	    
-	    {{#link-to "proceeding" proceeding tagName="li" class="list-group-item"}}
+	    {{#link-to "proceeding.edit" proceeding tagName="li" class="list-group-item"}}
 			{{proceeding.name}}
 			<span class="label label-default pull-right">3.1.1</span>
 		{{/link-to}}

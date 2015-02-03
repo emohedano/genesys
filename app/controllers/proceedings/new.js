@@ -1,12 +1,11 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
-
+export default Ember.ObjectController.extend({
 	actions: {
-		createProceeding: function() {
+		save: function() {
 
 			// Get the todo title set by the "New Todo" text field
-			var name = this.get('newName');
+			var name = this.get('name');
 			if (!name.trim()) { return; }
 
 			// Create the new Todo model
@@ -14,11 +13,13 @@ export default Ember.Controller.extend({
 				name: name
 			});
 
-			// Clear the "New Todo" text field
-			this.set('newName', '');
-
 			// Save the new model
-			proceeding.save();
+			proceeding.save()
+			.then(()=>{
+
+				this.transitionToRoute('proceeding.edit', proceeding);
+			});
+
 		}
 	}
 });

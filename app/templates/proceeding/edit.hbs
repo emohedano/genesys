@@ -1,0 +1,15 @@
+<div class="panel panel-info col-lg-4 detail-panel">
+	<div class="panel-heading">
+		<h3>{{name}}</h3>
+	</div>
+	<div class="panel-body">
+		<div class="form-group">
+			<label>Nombre </label>
+			{{input class="form-control" value=name}}
+		</div>
+		{{#if validationError}}
+			<div class="alert alert-danger">{{validationError}}</div>
+		{{/if}}
+		<button class="btn btn-primary btn-sm" {{action "save"}}>Guardar</button>
+	</div>
+</div>
